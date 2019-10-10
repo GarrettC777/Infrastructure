@@ -1,0 +1,67 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+    - name: install system updates for ubuntu systems
+      apt: upgrade=dist update_cache=yes
+      when: ansible_distribution == "Ubuntu"
+
+    - name: backup copy of sudoers
+      command: cp -f /etc/sudoers /etc/sudoers.backup
+
+    - name: include cit480 group as sudo users
+      lineinfile:
+        dest: /etc/sudoers
+        insertafter: '^%admin'
+        line: '%cit480 ALL=(ALL:ALL) ALL'
+        validate: /usr/sbin/visudo -cf %s
+
+    - name: create cit480 group
+      group:
+        name: cit480
+        state: present
+
+    - name: create group member users for cit480 group
+      user:
+        name: "{{ item }}"
+        group: cit480
+        append: yes
+        password: 'passwordhash'
+      with_items:
+        - mark
+        - garrett
+        - artur
+        - luis
+        - christopher
+
+    - name: set up authorized keys for user garrett
+      authorized_key: user=garrett key="{{ item }}"
+      with_file:
+        - /home/garrett/garrett.pub
+
+    - name: set up authorized key for user chris
+      authorized_key: user=christopher key="{{ item }}"
+      with_file:
+        - /home/garrett/keys/chris.pub
+
+    - name: set up authorized key for user mark
+      authorized_key: user=mark key="{{ item }}"
+      with_file:
+        - /home/garrett/keys/mark.pub
+
+    - name: set up authorized key for user luis
+      authorized_key: user=mark key="{{ item }}"
+      with_file:
+        - /home/garrett/keys/luis.pub
+
+    - name: set up authorized key for user artur
+      authorized_key: user=mark key="{{ item }}"
+      with_file:
+        - /home/garrett/keys/artur.pub
+
+
+    - name: configure sshd_config to not accept PAM
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^UsePAM yes'
+        line: UsePAM no

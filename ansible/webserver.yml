@@ -1,0 +1,34 @@
+
+---
+# setup apache2 web server and php module
+- hosts: webservers
+  vars:
+     directory_index: 'index.php index.html index.cgi index.pl index.xhtml index.htm'
+  become: yes
+  tasks:
+
+    - apt_repository:
+        validate_certs: no
+        repo: 'ppa:ondrej/php'
+        state: present
+
+    - name: update package list
+      apt: update_cache=yes
+
+    - name: apache2 and php, including php dependencies 
+      apt: 
+        pkg: 
+          - apache2 
+          - php
+          - php7.2-cli
+          - php7.2-curl
+          - php7.2-gd
+          - php7.2-mbstring
+          - php7.2-xml
+        state: present 
+        update_cache: yes
+
+    - name: start apache service
+      service:
+        name: apache2
+        state: started
