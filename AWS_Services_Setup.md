@@ -32,7 +32,9 @@ The Amazon EC2 Service is designed to make a secure compute capacity within AWS,
 
 **2)** Once given the option of which **AMI** to use, we chose to go with **Ubuntu 16.04**.
 
-**3)** We then focused on creating a cit480 **Security Group** with the given inbound and outbound settings:
+**3)** When prompted to choose **Instance Type**, we went with **t2.micro**.
+
+**4)** We then focused on creating a cit480 **Security Group** with the given inbound and outbound settings:
 
 **Inbound**
 
@@ -50,4 +52,6 @@ The Amazon EC2 Service is designed to make a secure compute capacity within AWS,
 
 		Type			Protocol		Port Range		Source				Description
 		All Traffic		All				All				0.0.0.0/0
+
+**5)** Finally, when hitting the **Launch** button, we are instructed to **Create a New Key Pair** which we then saved in a secure location.
 ## Route53 ##
