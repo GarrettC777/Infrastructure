@@ -39,14 +39,14 @@ The Amazon EC2 Service is designed to make a secure compute capacity within AWS,
 **Inbound**
 
 	Type			Protocol		Port Range		Source				Description
-	HTTP			TCP				80				0.0.0.0/0			HTTP
-	HTTP			TCP				80				::/0				HTTP
-	All Traffic		All				All				142.129.57.191/32
+	HTTP			TCP			80				0.0.0.0/0			HTTP
+	HTTP			TCP			80				::/0				HTTP
+	All Traffic		All			All				142.129.57.191/32
 	SSH			TCP				22				0.0.0.0/0			SSH
 	SSH			TCP				22				::/0				SSH
-	HTTPS			TCP				443				0.0.0.0/0			HTTPS
-	HTTPS			TCP				443				::/0				HTTPS
-	ICMP Rule		Echo Request	N/A				142.129.57.191/32
+	HTTPS			TCP			443				0.0.0.0/0			HTTPS
+	HTTPS			TCP			443				::/0				HTTPS
+	ICMP Rule		Echo Request		N/A				142.129.57.191/32
 
 **Outbound**
 
