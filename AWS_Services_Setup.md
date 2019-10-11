@@ -42,8 +42,8 @@ The Amazon EC2 Service is designed to make a secure compute capacity within AWS,
 	HTTP			TCP				80				0.0.0.0/0			HTTP
 	HTTP			TCP				80				::/0				HTTP
 	All Traffic		All				All				142.129.57.191/32
-	SSH				TCP				22				0.0.0.0/0			SSH
-	SSH				TCP				22				::/0				SSH
+	SSH			TCP				22				0.0.0.0/0			SSH
+	SSH			TCP				22				::/0				SSH
 	HTTPS			TCP				443				0.0.0.0/0			HTTPS
 	HTTPS			TCP				443				::/0				HTTPS
 	ICMP Rule		Echo Request	N/A				142.129.57.191/32
@@ -55,3 +55,6 @@ The Amazon EC2 Service is designed to make a secure compute capacity within AWS,
 
 **5)** Finally, when hitting the **Launch** button, we are instructed to **Create a New Key Pair** which we then saved in a secure location.
 ## Route53 ##
+The Amazon Route 53 Service is a high scalable cloud Domain Name System (DNS).
+
+**1)** 
