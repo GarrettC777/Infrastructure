@@ -26,5 +26,28 @@ The Amazon VPC service is a virtual network that allows a user to launch other A
 
 **8)** Lastly, the **Route Tables** for the public and private subnets were automatically created, along with an **Internet Gateway**.
 ## EC2 ##
-The Amazon EC2 Service is designed to 
+The Amazon EC2 Service is designed to make a secure compute capacity within AWS, allowing for easier web-scale computing.
+
+**1)** We first navigated to the **Amazon EC2 Dashboard**, and chose **Launch Instance**.
+
+**2)** Once given the option of which **AMI** to use, we chose to go with **Ubuntu 16.04**.
+
+**3)** We then focused on creating a cit480 **Security Group** with the given inbound and outbound settings:
+
+**Inbound**
+
+		Type			Protocol		Port Range		Source				Description
+		HTTP			TCP				80				0.0.0.0/0			HTTP
+		HTTP			TCP				80				::/0				HTTP
+		All Traffic		All				All				142.129.57.191/32
+		SSH				TCP				22				0.0.0.0/0			SSH
+		SSH				TCP				22				::/0				SSH
+		HTTPS			TCP				443				0.0.0.0/0			HTTPS
+		HTTPS			TCP				443				::/0				HTTPS
+		ICMP Rule		Echo Request	N/A				142.129.57.191/32
+
+**Outbound**
+
+		Type			Protocol		Port Range		Source				Description
+		All Traffic		All				All				0.0.0.0/0
 ## Route53 ##
