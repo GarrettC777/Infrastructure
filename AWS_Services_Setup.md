@@ -11,9 +11,20 @@ The Amazon VPC service is a virtual network that allows a user to launch other A
 
 **4)** We went with the **VPC with Public and Private Subnets** option, and hit **Select*.
 
-**5)** We filled out the required fields. ***Insert image of setup***
+**5)** We filled out the required fields, and named the VPC **cit480**.
 
 **6)** As required by the lab, we now had to create 2 additional public and private subnets. 
+
+**7)** The current setup for both our public and private subnets are as follows:
+
+		Public Subnet 1		10.0.16.0/20
+		Public Subnet 2		10.0.32.0/20
+		Public Subnet 3		10.0.48.0/20
+		Private Subnet 1	10.0.0.0/22
+		Private Subnet 2	10.0.4.0/22
+		Private Subnet 3	10.0.8.0/22
+
+**8)** Lastly, the **Route Tables** for the public and private subnets were automatically created, along with an **Internet Gateway**.
 ## EC2 ##
 The Amazon EC2 Service is designed to 
 ## Route53 ##
