@@ -69,4 +69,4 @@ The Amazon Route 53 Service is a high scalable cloud Domain Name System (DNS).
 						ns-1531.awsdns-63.org.
 						ns-956.awsdns-55.net.
 	thegroupseniordesign.tech.	SOA	ns-157.awsdns-19.com. awsdns-hostmaster.amazon.com.	900
-	www.thegroupseniordesign.tech.	A	52.33.249.11					300
+	www.thegroupseniordesign.tech.	A	52.33.249.11						300
