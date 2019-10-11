@@ -17,12 +17,12 @@ The Amazon VPC service is a virtual network that allows a user to launch other A
 
 **7)** The current setup for both our public and private subnets are as follows:
 
-		Public Subnet 1		10.0.16.0/20
-		Public Subnet 2		10.0.32.0/20
-		Public Subnet 3		10.0.48.0/20
-		Private Subnet 1	10.0.0.0/22
-		Private Subnet 2	10.0.4.0/22
-		Private Subnet 3	10.0.8.0/22
+	Public Subnet 1		10.0.16.0/20
+	Public Subnet 2		10.0.32.0/20
+	Public Subnet 3		10.0.48.0/20
+	Private Subnet 1	10.0.0.0/22
+	Private Subnet 2	10.0.4.0/22
+	Private Subnet 3	10.0.8.0/22
 
 **8)** Lastly, the **Route Tables** for the public and private subnets were automatically created, along with an **Internet Gateway**.
 ## EC2 ##
@@ -38,20 +38,20 @@ The Amazon EC2 Service is designed to make a secure compute capacity within AWS,
 
 **Inbound**
 
-		Type			Protocol		Port Range		Source				Description
-		HTTP			TCP				80				0.0.0.0/0			HTTP
-		HTTP			TCP				80				::/0				HTTP
-		All Traffic		All				All				142.129.57.191/32
-		SSH				TCP				22				0.0.0.0/0			SSH
-		SSH				TCP				22				::/0				SSH
-		HTTPS			TCP				443				0.0.0.0/0			HTTPS
-		HTTPS			TCP				443				::/0				HTTPS
-		ICMP Rule		Echo Request	N/A				142.129.57.191/32
+	Type			Protocol		Port Range		Source				Description
+	HTTP			TCP				80				0.0.0.0/0			HTTP
+	HTTP			TCP				80				::/0				HTTP
+	All Traffic		All				All				142.129.57.191/32
+	SSH				TCP				22				0.0.0.0/0			SSH
+	SSH				TCP				22				::/0				SSH
+	HTTPS			TCP				443				0.0.0.0/0			HTTPS
+	HTTPS			TCP				443				::/0				HTTPS
+	ICMP Rule		Echo Request	N/A				142.129.57.191/32
 
 **Outbound**
 
-		Type			Protocol		Port Range		Source				Description
-		All Traffic		All				All				0.0.0.0/0
+	Type			Protocol		Port Range		Source				Description
+	All Traffic		All				All				0.0.0.0/0
 
 **5)** Finally, when hitting the **Launch** button, we are instructed to **Create a New Key Pair** which we then saved in a secure location.
 ## Route53 ##
