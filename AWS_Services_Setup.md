@@ -57,4 +57,14 @@ The Amazon EC2 Service is designed to make a secure compute capacity within AWS,
 ## Route53 ##
 The Amazon Route 53 Service is a high scalable cloud Domain Name System (DNS).
 
-**1)** 
+**1)** In order to connect our recently purchased domain name with our EC2 Instance, we created a **Hosted Zone** called thegroupseniordesign.tech.
+
+**2)** The Hosted Zone type was made **Public**, and 3 **Record Sets** were created within.
+
+**3)** The 3 Record Sets were created accordingly:
+
+	Name	Type	Value	TTL
+	thegroupseniordesign.tech.	NS	ns-157.awsdns-19.com. 	172800
+			ns-1581.awsdns-05.co.uk. 
+			ns-1531.awsdns-63.org. 
+			ns-956.awsdns-55.net.
