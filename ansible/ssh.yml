@@ -58,10 +58,3 @@
       authorized_key: user=mark key="{{ item }}"
       with_file:
         - /home/garrett/keys/artur.pub
-
-
-    - name: configure sshd_config to not accept PAM
-      lineinfile:
-        path: /etc/ssh/sshd_config
-        regexp: '^UsePAM yes'
-        line: UsePAM no
