@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+ 
+ 
+ <!–– Head section contains metadata for the webpage. ––> 
+<head>
+	<!–– Import styles.css. ––>
+    <link rel="stylesheet" href="styles.css">
+
+	<title>CIT 480 - Project 0</title>
+  
+	<div class="topnav">
+			<a class="active" href="#Guidelines">Project Guidelines</a>
+			<a href="members.html">Group Members</a>
+			<a href="#Project">Project Implementation</a>
+   </div>
+</head>
+
+
+<!–– Body section contains the main content of the webpage. ––> 
+<body id="Guidelines">
+<!–– Header sub-section contains introduction information for the webpage. ––> 
+  <header>
+	<!–– Warning: The image must be included in the same folder as the HTML and CSS files to be displayed! ––> 
+	<img src="csun_banner.png" alt="CSUN Banner" width="1887" height="360"> 
+	
+	<h1>Project Guidelines</h1>
+	<ul>
+		<li><a href="#Tasks">Tasks</a></li>
+		<li><a href="#PT">Project Tasks</a></li>
+		<li><a href="#TB">Task Breakdown</a></li>
+		<li><a href="#Deliverables">Deliverables</a></li>
+	</ul>
+  </header>
+  
+	<h2 id="Tasks">Tasks</h2>
+		<p>Below are a set of tasks that need to be completed for Project 0. 
+		   There are both individual (I) and team (T) based tasks. 
+		</p>
+
+		<h3>Build a Team (T)<h3/>
+			<p>You will need to create a team of 3 – 4 people preferably. 
+			   Once you have found your team members, you will need to come up with a team name. 
+			   Finally, you will need to let the professor know the members of your team and it’s name. 
+			</p> 
+
+		<h3>GitHub (I)</h3> 
+			<p>Git is a popular distributed version control system (DVCS) that allow a group of users to work together
+			   on a common set of code. We will be using git as part of this class so it will be helpful to learn about
+			   it as quickly as possible. You should have git installed locally on your computer and it should be used
+			   to track the work you do with your team. 
+			</p>
+			   
+			<p>GitHub is an online platform that allow people around the world to work on projects together. 
+			   We will be utilizing GitHub in this course to track team work. You will need to sign up for a 
+			   GitHub account (free).
+			</p> 
+			
+			<p>GitHub offers additional extra resources such as an issue/task tracker and a peer review system 
+			   for changes made (pull requests). We will discuss this in more depth during class. 
+			</p>
+
+			<p>It is also suggested that you sign up for the GitHub Student Developer pack. This provides you with
+   			   a set of free and discounted software tools that can be useful in future endeavors. 
+			   https://education.github.com/pack 
+			</p>
+
+		<h3>Amazon Web Services Account (I)</h3>
+			<p>Amazon Web Services (AWS) will be used during this course. AWS allows us to create a professional and public
+			   environment with little overhead. Each member of the team will create their own account. AWS Educate is a 
+			   program that gives students a $100 credit to use when learning AWS. We will combine these credits together
+			   in this course so that the projects are free. 
+			</p>
+
+			<p>You will need to create a full account and not use an AWS starter account. This will require each member of 
+			   team to have a credit card for initial creation. You can also use a pre-paid credit card if you prefer. 
+			</p>
+
+			<p>You will be sent a code that can be used to redeem a $100 credit for AWS. You can hold onto this code and 
+			   apply all of them to a single account. It is up to the group. If each person applies this to their account, 
+		       you will need to look into an AWS Organization so that you can chain together all of the accounts. 
+		    </p> 
+		   
+		<h3>Slack (I)</h3>
+			<p>Your team can use Slack to communicate about work that needs to be done. You should join the #cit480-sat 
+			   channel and you can create another channel for you group. Please don't make these channels private groups
+		       and do not share secrets inside of slack.
+		    </p>
+
+		     <p>Also note that this Slack is free so there is no long term history. You should keep track of important 
+		        conversations you have in a different medium too for longevity. 
+		     </p>
+		   
+		<h3>Leader of the Project</h3>
+			<p>One member of the team should be appointed the "leader" for this project. This leader should change for each
+			   project between the different members of the group. The lead is responsible for making sure that work is 
+		       completed by other members in a timely manner. The lead will also need to work on other aspects of the 
+		       project but must also keep track of everything that is happening. The lead will need to coordinate work as 
+		       it is done. 
+		    </p>
+
+	<h2 id="PT">Project Tasks</h2>
+		<p>These tasks are specific to Project 0 and will result in the graded material.</p> 
+
+		<p>You will need to break down the different steps below add a set of issues in your repo on GitHub for each task 
+		   and assign them to members of the team. Team members should track progress in these issues and attach them to 
+		   pull requests if applicable. Issues can work as a log that tracks the work done over the past week. 
+		</p>
+	   
+		<h3>Purchase a Domain (T)</h3>
+			<p>will need to purchase a public domain for your team to use for the course. A domain name is something like 
+			   csun.edu or google.com. You can use any Top-level Domain (TLD) that you'd like as these tend to be cheaper. 
+		       Ideally, the domain name your choose should allow the professor to easily identify which team owns it. 
+			</p>
+
+			<p>NameCheap is a domain registrar that allows you to search for your preferred domain name. It also has deals 
+		       where you can get a domain name for as little as $0.99 for a year. 
+			</p> 
+		   
+		<h3>Setup AWS Virtual Private Cloud (VPC)</h3>
+			<p>An AWS VPC allows every organization to setup one or more networks inside of AWS. You should be given a 
+			   default VPC with a given subnet (Usually 172.31.0.0/16). You will need to break these networks into public 
+			   and private subnetworks to allow services in AWS to function properly. 
+			</p>
+
+			<p style="margin-left:2%; margin-right:2%;">
+			Design your network so that there are the following subnets:<br>
+				●	3 public subnets in 3 different availability zones (AZ) with at least 1024 available IP addresses per subnet.<br>
+				●	3 private subnets in 3 different availability zones (AZ) with at least 4096 available IP addresses per subnet.<br>
+				●	1 route table for the public subnets<br>
+				●	1 route table for the private subnets<br>
+				●	1 Internet Gateway (IG) attached to the default route of the public subnet routing table<br>
+			</p>
+		
+		<h3>Setup a Web Server on AWS Elastic Compute Cloud (EC2)</h3>
+		    <p>AWS Elastic Compute Cloud allows us to easily create virtual machines (VM), referred to as instances in AWS, 
+			   with a base OS image (Amazon Machine Image or AMI). There are different types of instances that define the number
+		       of vCPU cores, RAM and storage are provided by default. Instances are currently charged for by the second but when
+		       looking up the price you will see it provided for each hour of service the instance uses. 
+			</p>
+
+			<p>You will need to choose the OS that you'd like to use as well as the web server that will be serving up your pages.</p>
+
+			<p>You also need to think of a secure way to allow all users to access your machine while not sharing credentials 
+			   (see task below). You should look at the EC2 Userdata service and the cloud-init process on most machines. You 
+		       should be able to determine a way to provide SSH access without the use of passwords. All users can still use the
+		       default account provided on the system. 
+			</p>
+		   
+		<h3>Setup your Domain</h3>
+			<p>You domain should use AWS Route53 to serve requests. You will need to setup the provider you purchased your domain 
+			   from point to your domain on the Route53 servers. You will need to setup the following records in AWS Route53 that 
+			   will all be served from your webserver. 
+			</p>
+
+			<p style="margin-left:2%; margin-right:2%;">
+				●	Apex domain <br>
+			    ●	www.<yourdomain> <br>
+			</p>
+		
+		<h3>Generate TLS Certificates</h3>
+	        <p>It is important to protect users to any website by encrypting traffic to and from it. We do this using 
+			   Transport Layer Security (TLS) certificates. For a long time, buying a TLS certificate was very expensive 
+		       but recent efforts have made these certificates free. One such project that has helped this is called Let's Encrypt.
+			   Let's Encrypt will allow the owner of a domain to verify ownership and be able to get a TLS certificate for free. 
+			</p>
+
+			<p>You must generate a set of security certificates for your domain that will work for each of the DNS addresses 
+		       mentioned in the section "Setup your Domain". A single certificate should be used for all of the addresses. 
+			</p>
+
+			<p>The private key of your TLS certificate should be kept secret and not shared with anyone outside of your group 
+		       to ensure that your users are protected. You must determine a safe and effective way to store and protect your 
+		       certificates while also making them available to your instance to use. You can look at other AWS services such 
+		       as the Secret Store to help with this. 
+			</p>
+
+		<h3>Ansible Playbook</h3>
+			<p>As you have seen in previous labs Ansible is a configuration management tool and can be used to setup and configure 
+		       a server. 
+			</p>
+
+			<p>Create an Ansible playbook that should install a web server and you may use either Apache or Nginx. In addition to 
+		       installing the web server you should have a generic .html page that shows your team name and list the members of 
+		       your group. Write a readme.md page that describes what the playbook is used for and how to execute the playbook. 
+			</p>
+
+			<p>This is a great place to use Ansible to configure user’s setup. You could write a playbook that will create users 
+		       and copy their public ssh keys. 
+			</p>
+		   
+	<h2 id="TB">Task Breakdown</h2>
+	    <p>You will need to break down all of your tasks into a set of issues inside of GitHub. These tasks should be 
+		   broken down into subtasks as needed and assigned to different members of the team. Each member will be responsible
+		   for keeping the task up to date with information about how the task is being completed and should close the task 
+		   when it is done. 
+		</p>
+
+		<p>You should show the professor your task breakdown.</p>
+		
+	<h2 id="Deliverables">Deliverables</h2>
+	    <p>These are the requirements for grading for Project 0. <br>
+			1.	Complete all of the tasks above. <br>
+			2.	A running website on a service in AWS EC2 that is publicly available over your DNS address using HTTPS. <br>
+			3.	Ansible playbook should be inside the group repository along with documentation on how to run the playbook. <br>
+			4.	Complete documentation of all tasks performed. Documentation must be clear, concise and complete as to not 
+				leave anything out. You should have the following documents in your infrastructure repository as a set of 
+				markdown files. <br> 
+		</p>
+			<p style="margin-left:2%; margin-right:2%;">  
+				a.	README.md for each repo giving basic information <br>
+				b.	AWS setup <br>
+				c.	AWS services setup (EC2, VPC, Route53, etc) <br>
+				d.	AWS service diagram showing each aspect of the infrastructure <br>
+			</p>
+		<p>
+			5.	Group presentation at the end of the project. 
+		</p>
+</body>
+
+
+<!–– Footer section contains other content for the webpage. ––> 
+<footer> 
+
+</footer> 
+
+
+</html>
